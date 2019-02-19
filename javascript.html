@@ -3,13 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .strike {
+            text-decoration:line-through;
+
+
+        }
+
+        .strike:after {
+            text-decoration: none;
+        }
+
+    </style>
 </head>
 <body>
 <h1 id="header">Last King</h1>
 <h2>By groceries</h2>
 <ul>
-    <li id="one" onclick="changeStrike(this.id)" class="hot"><em>fresh</em>figs</li>
-    <li id="two" onclick="changeStrike(this.id)" class="hot">Pine nuts</li>
+    <li id="one" onclick="changeStrike(this.id)"  class="hot"><em>fresh</em>figs</li>
+    <li id="two" onclick="changeStrike(this.id)"  class="hot">Pine nuts</li>
     <li id="three" onclick="changeStrike(this.id)" class="hot">Honey</li>
 
     <li id="four class" onclick="changeStrike(this.id)">Balsamic finager</li>
@@ -26,13 +38,42 @@
 
         console.log(id);
 
-        document.getElementById(id).className='strike';
+
+       console.log(document.getElementById(id).classList);
+       var e=document.getElementById(id).classList;
+       var isStrike=false;
+       for(var  i=0; i<e.length;i++)
+       {
+           if(e[i]=='strike')
+           {
+               isStrike=true;
+           }
+           console.log(e[i]);
+       }
+
+
+       if(isStrike==true)
+       {
+           document.getElementById(id).className='';
+
+       }
+       else {
+           document.getElementById(id).className='strike';
+
+
+       }
+
+
 
 
 
 
 
     }
+
+
+
+
 
 
 </script>

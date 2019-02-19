@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .hot {
+            color: green;
+        }
+    </style>
+
 </head>
 <body>
 <h1 id="header">Last King</h1>
@@ -15,15 +21,29 @@
 
 </ul>
 <script>
-    var el=document.getElementById('one');
-    el.className='cool';
-
-    var elements=document.getElementsByClassName('hot');
-    if(elements.length>2) {
-        var el=elements[2];
-        el.className='cool';
-    }
+    // var el=document.getElementById('one');
+    // el.className='cool';
+    //
+    // var elements=document.getElementsByClassName('hot');
+    // if(elements.length>2) {
+    //     var el=elements[2];
+    //     el.className='cool';
+    // }
 </script>
+
+  <script>
+
+          console.log('alert');
+
+          var hotItems = document.getElementsByClassName('hot');
+
+          for (var i = 0; i < hotItems.length; i++) {
+              console.log(hotItems[i]);
+              hotItems[i].className = 'hot cool';
+          }
+
+          
+  </script>
 
 <p>Mirza</p>
  <p>ks</p>

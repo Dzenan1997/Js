@@ -8,25 +8,33 @@
 <h1 id="header">Last King</h1>
 <h2>By groceries</h2>
 <ul>
-    <li id="one" class="hot"><em>fresh</em>figs</li>
-    <li id="two" class="hot">Pine nuts</li>
-    <li id="three" class="hot">Honey</li>
-    <li id="four">Balsamic finager</li>
+    <li id="one" onclick="changeStrike(this.id)" class="hot"><em>fresh</em>figs</li>
+    <li id="two" onclick="changeStrike(this.id)" class="hot">Pine nuts</li>
+    <li id="three" onclick="changeStrike(this.id)" class="hot">Honey</li>
+
+    <li id="four class" onclick="changeStrike(this.id)">Balsamic finager</li>
 
 </ul>
-<script>
-    var el=document.getElementById('one');
-    el.className='cool';
 
-    var elements=document.getElementsByClassName('hot');
-    if(elements.length>2) {
-        var el=elements[2];
-        el.className='cool';
-    }
-</script>
 
 <p>somethinbjjhjijhig</p>
  <p>ks</p>
 <p>m</p>
+<script>
+
+    function changeStrike(id) {
+
+        console.log(id);
+
+        document.getElementById(id).className='strike';
+
+
+
+
+
+    }
+
+
+</script>
 </body>
 </html>
